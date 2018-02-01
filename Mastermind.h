@@ -1,0 +1,8 @@
+//
+// Created by madis on 2/1/2018.
+//
+
+#ifndef MASTERMIND_MASTERMIND_H
+#define MASTERMIND_MASTERMIND_H
+
+#endif //MASTERMIND_MASTERMIND_H
