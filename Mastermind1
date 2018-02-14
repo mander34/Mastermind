@@ -16,7 +16,7 @@ int main() {
     int avg_guesses = 0;
     
     
-    string file = "stats.txt";
+    string file = "stats1.txt";
     
     
     
