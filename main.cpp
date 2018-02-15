@@ -3,6 +3,9 @@
 // CS205B 
 // 15 February 2018
 //
+// This program is a recreation of the game Mastermind. Player can play as either
+// codemaker or codebreaker. Game statistics are saved locally to a file.
+
 #include <iostream>
 #include <fstream>
 #include <locale>
@@ -12,8 +15,9 @@
 using namespace std;
 
 /**
- * This program is a recreation of the game Mastermind. Player can play as either
- * codemaker or codebreaker. Game statistics are saved locally to a file. 
+ * Main method contains whole program; An outer loop controls the main menu and 
+ * handles the menu selections. A series of if statements control the delegation   
+ * of the user's menu input. A few statistics are kept in a file called "stats.txt"
  */
 int main() {
     bool play_again;
@@ -22,6 +26,8 @@ int main() {
     int num_wins = 0;
     int num_lose = 0;
     
+    //File I/O for stats
+    //By Austin Batistoni
     string file = "stats.txt";
     
     ifstream in_file (file); 
@@ -38,6 +44,7 @@ int main() {
     }
     
     //Menu loop
+    //By Austin Batistoni
     while(!quit){
         cout << "Welcome to Mastermind!" << endl;
 
@@ -57,6 +64,7 @@ int main() {
         }
         
         //-------------CODEBREAKER---------------
+        //By Robert Baranov
         if (menu_choice == 1){
             play_again = true;
             while (play_again == true){
@@ -196,6 +204,7 @@ int main() {
         
         
         //-----------------CODEMAKER-----------------------
+        //By Maddie Anderson
         else if (menu_choice == 2) {
             play_again = true;
             while (play_again == true){
@@ -333,6 +342,7 @@ int main() {
         }
         
         //----------------HOW TO PLAY------------------
+        //By Austin Batistoni
         else if (menu_choice == 3){
             cout << endl << "HOW TO PLAY" << endl;
             cout << "The goal of mastermind is to guess the secret code consisting of a series of 4 colored pegs." << endl;
@@ -345,6 +355,7 @@ int main() {
         }
         
         //--------------STATISTICS--------------------
+        //By Austin Batistoni
         else if (menu_choice == 4){
             cout << endl;
             cout << "STATS" << endl;
@@ -356,6 +367,7 @@ int main() {
         }
         
         //----------------QUIT----------------------
+        //By Austin Batistoni
         else if (menu_choice == 5){
             cout << "Thanks for playing!!";
             quit = true;
